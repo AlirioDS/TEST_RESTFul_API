@@ -1,6 +1,6 @@
-# Rails API Boilerplate
+## Rails API Boilerplate by Me
 
-Rails 8 API with PostgreSQL, Solid Queue, Solid Cache and Solid Cable using Docker.
+https://github.com/AlirioDS/rails_api_boiler_plate
 
 ## Clone and Config
 
