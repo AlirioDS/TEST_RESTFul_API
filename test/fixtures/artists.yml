@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+radiohead:
+  name: Radiohead
+  bio: English rock band formed in Abingdon, Oxfordshire
+  country: UK
+  formed_year: 1985
+
+daft_punk:
+  name: Daft Punk
+  bio: French electronic music duo
+  country: France
+  formed_year: 1993
+
+beatles:
+  name: The Beatles
+  bio: English rock band formed in Liverpool
+  country: UK
+  formed_year: 1960

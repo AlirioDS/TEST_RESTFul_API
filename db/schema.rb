@@ -10,9 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_20_174140) do
+ActiveRecord::Schema[8.0].define(version: 2026_02_03_194817) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+
+  create_table "albums", force: :cascade do |t|
+    t.string "title"
+    t.date "release_date"
+    t.string "genre"
+    t.integer "total_tracks"
+    t.integer "duration_seconds"
+    t.bigint "release_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["release_id"], name: "index_albums_on_release_id"
+  end
+
+  create_table "artist_releases", force: :cascade do |t|
+    t.bigint "artist_id", null: false
+    t.bigint "release_id", null: false
+    t.string "role"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["artist_id"], name: "index_artist_releases_on_artist_id"
+    t.index ["release_id"], name: "index_artist_releases_on_release_id"
+  end
+
+  create_table "artists", force: :cascade do |t|
+    t.string "name"
+    t.text "bio"
+    t.string "country"
+    t.integer "formed_year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "releases", force: :cascade do |t|
+    t.string "title"
+    t.date "release_date"
+    t.string "release_type"
+    t.string "label"
+    t.string "catalog_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "sessions", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -157,6 +198,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_20_174140) do
     t.index ["role"], name: "index_users_on_role"
   end
 
+  add_foreign_key "albums", "releases"
+  add_foreign_key "artist_releases", "artists"
+  add_foreign_key "artist_releases", "releases"
   add_foreign_key "sessions", "users"
   add_foreign_key "solid_queue_blocked_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade
   add_foreign_key "solid_queue_claimed_executions", "solid_queue_jobs", column: "job_id", on_delete: :cascade

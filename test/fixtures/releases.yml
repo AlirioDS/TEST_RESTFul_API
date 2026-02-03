@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+ok_computer_release:
+  title: OK Computer
+  release_date: 1997-05-21
+  release_type: album
+  label: Parlophone
+  catalog_number: 7243 8 55229 2 8
+
+random_access_memories_release:
+  title: Random Access Memories
+  release_date: 2013-05-17
+  release_type: album
+  label: Columbia
+  catalog_number: 88883716862
+
+abbey_road_release:
+  title: Abbey Road
+  release_date: 1969-09-26
+  release_type: album
+  label: Apple Records
+  catalog_number: PCS 7088
+
+get_lucky_single:
+  title: Get Lucky
+  release_date: 2013-04-19
+  release_type: single
+  label: Columbia
+  catalog_number: 88883713442

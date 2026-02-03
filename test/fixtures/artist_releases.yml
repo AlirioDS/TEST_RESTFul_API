@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+radiohead_ok_computer:
+  artist: radiohead
+  release: ok_computer_release
+  role: primary
+
+daft_punk_ram:
+  artist: daft_punk
+  release: random_access_memories_release
+  role: primary
+
+daft_punk_get_lucky:
+  artist: daft_punk
+  release: get_lucky_single
+  role: primary
+
+beatles_abbey_road:
+  artist: beatles
+  release: abbey_road_release
+  role: primary

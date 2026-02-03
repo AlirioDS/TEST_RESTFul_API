@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+ok_computer:
+  title: OK Computer
+  release_date: 1997-05-21
+  genre: Alternative Rock
+  total_tracks: 12
+  duration_seconds: 3215
+  release: ok_computer_release
+
+random_access_memories:
+  title: Random Access Memories
+  release_date: 2013-05-17
+  genre: Electronic
+  total_tracks: 13
+  duration_seconds: 4476
+  release: random_access_memories_release
+
+abbey_road:
+  title: Abbey Road
+  release_date: 1969-09-26
+  genre: Rock
+  total_tracks: 17
+  duration_seconds: 2820
+  release: abbey_road_release
